@@ -20,6 +20,8 @@ public class TextBoxTests {
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
         $("#firstName").setValue("Grigorii");
         $("#lastName").setValue("Plugin");
         $("#userEmail").setValue("grifa111@yandex.ru");
